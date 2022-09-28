@@ -1,18 +1,17 @@
 #include "main.h"
 
 
-
 /**
 
- * wildcmp - Compare strings
+ * wildcmp - compare two strings with "wildcard expansion" capabilities
 
- * @s1: pointer to string params
+ * @s1: string 1
 
- * @s2: pointer to string params
+ * @s2: string 2
 
- * Return: 0
+ * Return: 1 if strings can be considered identical, else 0
 
- */
+ */
 
 
 
@@ -37,7 +36,6 @@ return (*s2 == '\0');
 }
 
 
-
 if (*s2 == '*')
 
 {
@@ -57,3 +55,5 @@ return (wildcmp(s1 + 1, s2 + 1));
 return (0);
 
 }
+
+
